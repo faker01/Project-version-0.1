@@ -1,6 +1,7 @@
 ﻿#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <direct.h>
+#include <windows.h>
 
 
 // создаются инициализационные переменные
@@ -259,7 +260,20 @@ bool check_loose()
 // основная функция
 int main()
 {   
-    chdir("/Pro ject/");
+    // ЧТОБЫ РАБОТАЛИ ТЕКСТУРЫ
+    std::string path, new_path = "";
+    TCHAR buffer[MAX_PATH];
+    GetCurrentDirectory(sizeof(buffer), buffer);
+    CharToOemA(buffer, buffer);
+    path = buffer;
+    for (int i = 0; i < path.size() - 20; i++)
+    {
+        new_path = new_path + path[i];
+    }
+    char new_path_char[256];
+    strcpy(new_path_char, new_path.c_str());
+    SetCurrentDirectory(new_path_char);
+
     // вызов функции инициализации графики
     setup();
     // создание переменной дельты часов
