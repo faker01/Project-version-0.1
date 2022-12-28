@@ -1,6 +1,5 @@
 ﻿#include <SFML/Graphics.hpp>
 #include <iostream>
-#include <direct.h>
 #include <windows.h>
 
 
