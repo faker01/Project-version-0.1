@@ -2,7 +2,7 @@
 System requirements:
 - OC: Windows
 Launch preparation:
-- download folder Game
+- download folder game
 - Open
 - Play
 For editors:
