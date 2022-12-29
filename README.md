@@ -1,7 +1,7 @@
 # Flappy bird - project for university
 System requirements:
 - OC: Windows
-# Launch preparation:
+/ Launch preparation:
 - download folder game
 - Open
 - Play
